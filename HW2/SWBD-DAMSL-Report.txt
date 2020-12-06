@@ -1,0 +1,46 @@
+Assignment 2 Report
+
+Name: Vishal Reddy Kallem
+
+1. Describe how you evaluated your baseline and advanced features:
+   I have split the dataset into 75% train and 25% dev using a python script.
+   I trained the model using the train dataset (1 to 807) and tested it against the dev dataset (808 to 1076).
+   I calculated accuracy by correctly_labelled_tags / total_labelled_tags.
+   I multiplied the accuracy by 100 to get in percentages.
+   Used get_data() method from the hw2_corpus_tool.py for extracting the dialogs of csv files.
+
+2. Accuracy of baseline features during your evaluation:
+   Accuracy of baseline features = 71.88304595459157 (Multiplied by 100)
+
+3. Describe your advanced feature set:
+   - A feature for whether or not the speaker has changed in comparison with the previous utterance.
+   - A feature marking the first utterance of the dialogue.
+   - A feature for every token in the utterance.
+   - A feature for every part of speech tag in the utterance.
+   - A feature marking the any other utterance of the dialogue.
+   - A feature marking whether the utterance is a question.
+   - A feature marking the first token in the utterance.
+   - A feature marking the last token in the utterance.
+   - A feature marking the first part of speech tag in the utterance.
+   - A feature marking the last part of speech tag in the utterance.
+   - A feature for every bigram token in the utterance.
+   - A feature for every bigram part of speech tag in the utterance.
+   - A feature marking the utterance.
+   - A feature marking the length of the tokens in every utterance.
+
+
+4. If you tried and rejected alternate advanced feature sets, please describe them:
+   - n-gram models for tokens and part of speech tags in the utterance. (2-gram, 3-gram, 4-gram)
+   - Combination of multiple n-gram models for tokens and part of speech tags in the utterance.
+     (2-gram + 3-gram, 3-gram + 4-gram, 2-gram + 4-gram, 2-gram + 3-gram + 4-gram)
+   - A feature marking if the token is backchannel. Ex: (yes, oh okay, uh-huh etc)
+   - A feature marking if the bigram tokens are opinions. Ex: (i believe, it seems, i like etc)
+   - A feature marking if the token in the utterance is a punctuation.
+   - A feature containing the previous and next tokens for every token except the first and last token in the utterance.
+   - A feature containing the previous and next part of speech tag for every part of speech tag except the first and last part of speech tag in the utterance.
+
+   I have tested the model with all combinations of permutations of the features mentioned in 3 and 4.
+   The features mentioned in 3 provided the highest accuracy among all the features implemented.
+
+5. Accuracy of advanced features was:
+   Accuracy of advanced features = 74.2158851525318 (Multiplied by 100)

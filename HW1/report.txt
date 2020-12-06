@@ -1,0 +1,34 @@
+Assignment 1 Report
+
+Name: Vishal Reddy Kallem
+
+1. Performance on the development data with 100% of the training data
+1a. spam precision: 0.993088194636439
+1b. spam recall: 0.9774149659863945
+1c. spam F1 score: 0.9851892484914975
+1d. ham precision: 0.9467265725288831
+1e. ham recall: 0.9833333333333333
+1f. ham F1 score: 0.9646827992151734
+
+2. Performance on the development data with 10% of the training data
+2a. spam precision: 0.9442554305155718
+2b. spam recall: 0.9817687074829932
+2c. spam F1 score: 0.9626467449306296
+2d. ham precision: 0.9505169867060561
+2e. ham recall: 0.858
+2f. ham F1 score: 0.9018920812894183
+
+3. Description of enhancement(s) you tried (e.g., different approach(es) to smoothing, treating common words differently, dealing with unknown words differently):
+    3a. Considered the tokens present in test data set and not in train data set.
+    3b. Ignored the words of length less than 2.
+    3c. Used n-grams model, where n is 2.
+	Note: Commented the code related to part 3 in both nblearn.py and nbclassify.py
+    
+4. Best performance results based on enhancements. Note that these could be the same or worse than the standard implementation.
+4a. spam precision: 0.9980848153214774
+4b. spam recall: 0.9926530612244898
+4c. spam F1 score: 0.995361527967258
+4d. ham precision: 0.9822368421052632
+4e. ham recall: 0.9953333333333333
+4f. ham F1 score: 0.9887417218543045
+
